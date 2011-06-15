@@ -11,12 +11,14 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'compass', :git => 'https://github.com/chriseppstein/compass.git', :branch => 'rails31'
 
+# If you don't have node installed. // Will be fixed by 3.1 release
+gem "execjs", "~> 1.1.3"
+
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
 
 group :production do
-  gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'pg'
 end
-
