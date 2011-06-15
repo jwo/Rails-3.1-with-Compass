@@ -7,6 +7,15 @@ The secret lies with:
 
     gem 'compass', :git => 'https://github.com/chriseppstein/compass.git', :branch => 'rails31'
 
+How to get working on Heroku?
+-----------------------------
+
+This secret is either being on the heroku cedar stack (node), or:
+
+		group :production do
+			gem 'therubyracer-heroku', '0.8.1.pre3'
+		end
+
 Commands to get started
 -----------------------
 
