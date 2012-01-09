@@ -1,18 +1,16 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc4'
+gem 'rails', '~> 3.1.0'
 gem 'sqlite3'
-
-# Asset template engines
-gem 'sass-rails', "~> 3.1.0.rc"
-gem 'coffee-script'
-gem 'uglifier'
 gem 'jquery-rails'
 gem 'haml'
-gem 'compass', :git => 'https://github.com/chriseppstein/compass.git', :branch => 'rails31'
 
-# If you don't have node installed. // Will be fixed by 3.1 release
-gem "execjs", "~> 1.1.3"
+group :assets do
+  gem 'sass-rails',   '~> 3.1.5'
+  gem 'coffee-rails', '~> 3.1.1'
+  gem 'uglifier', '>= 1.0.3'
+  gem "compass", "0.12.alpha.0"
+end
 
 group :test do
   # Pretty printed test output
@@ -20,6 +18,6 @@ group :test do
 end
 
 group :production do
-  gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'therubyracer-heroku'
   gem 'pg'
 end
